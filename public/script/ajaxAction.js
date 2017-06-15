@@ -26,7 +26,7 @@ function loadXMLDoc(filename, path){
 	    	myDivContent.innerHTML = xmlhttp.responseText;
 	    }
 	}
-	xmlhttp.open("POST",path + "/" + filename,true);
+	xmlhttp.open("GET",path + "/" + filename,true);
 	//设置ajax请求格式，通过send可以向后台传数据
 	//xmlhttp.open("GET","src/" + filename,true);
 	xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
