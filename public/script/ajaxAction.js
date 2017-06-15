@@ -1,3 +1,4 @@
+//troggle实现函数
 function troggleFunc(idNum, xmlhttp){
 	var myDivContent = document.getElementById(idNum).innerHTML;
 	if (myDivContent != ""){
@@ -11,7 +12,8 @@ function troggleFunc(idNum, xmlhttp){
 	//myDivContent = xmlhttp.responseText;
 	//document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
 }
-function loadXMLDoc(filename, path){
+//ajax实现,利用filename，path加载文件内容，e用来判断内容加载对象
+function loadXMLDoc(filename, path, e){
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.onreadystatechange = function()
 	{
@@ -22,11 +24,19 @@ function loadXMLDoc(filename, path){
 	    	//troggle实现
 	    	//troggleFunc("myDiv",xmlhttp);
 	    	//对象引用改变对象本身
-	    	var myDivContent = document.getElementById("secContent");
+	    	// console.log(e);
+	    	var myDivContent;
+	    	if(e == undefined){
+	    		myDivContent = document.getElementById("secContent");
+	    	}	else {
+	    	 
+	    		myDivContent = e;
+	    		console.log(e);
+	    	}
 	    	myDivContent.innerHTML = xmlhttp.responseText;
 	    }
 	}
-	xmlhttp.open("GET",path + "/" + filename,true);
+	xmlhttp.open("POST",path + "/" + filename,true);
 	//设置ajax请求格式，通过send可以向后台传数据
 	//xmlhttp.open("GET","src/" + filename,true);
 	xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");

@@ -9,5 +9,16 @@ for (var i = 0; i < liList.length; i++){
 	//liList[i].style.background = "ragb(255, 255, 255," + baseOpicity + ")";
 	liList[i].style.opacity = baseOpicity;
 	//console.log("666" + liList[i].style.background);
+	//这里ajax会自动执行
+	//liList[i].addEventListener("click", loadXMLDoc('test1.txt','src', liList[i]));
+	//用onclick就不会自动执行，按照预期，点击li加载对应的文本内容
+	liList[i].onclick = function(){
+		loadXMLDoc('test1.txt','src', this);
+		console.log(this);
+	};
 }
-console.log(liList);
+// liList[1].onclick = function(){
+// 	loadXMLDoc('personalInfo.html','view');
+// };
+//console.log(liList);
+
