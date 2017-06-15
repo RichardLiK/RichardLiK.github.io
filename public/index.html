@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>my instruction page</title>
+	<!-- 暂时用base标签替代绝对地址,，由于git服务器的目录和本地不同，所以本地需要取消注释 -->
+	<!-- <base href="public/" /> -->
+	<link rel="stylesheet" href="style/reset.css ">
+	<link rel="stylesheet" href="style/indexStyle.css">
+	<script src="script/ajaxAction.js"></script>
+</head>
+<body>
+
+	<div id="content">
+		<!-- welcome -->
+		<header id="headContent">
+			<nav id="navContent">
+			<ul>
+			<!-- https://richardlik.github.io/public/index.html -->
+				<li><a href="http://127.0.0.1:3030/public/index.html">首页</a></li>
+				<!-- href会直接跳转，从而不执行之后的onclick -->
+				<li><a onclick="loadXMLDoc('personalInfo.html','view')">个人信息</a></li>
+				<li><a onclick="loadXMLDoc('personalInfo.html','view')">作品展示</a></li>
+				<li><a onclick="loadXMLDoc('personalInfo.html','view')">学习心得</a></li>
+				<li><a onclick="loadXMLDoc('personalInfo.html','view')">留言给我</a></li>
+			</ul>
+		</nav>
+		</header>
+		<!-- header占位元素 -->
+		<div class="header-place"></div>
+
+		<!-- 尝试用一张img来代替背景 -->
+		<!-- <img src="src/indexPage.jpg" alt="content background" id="backgroundImg"> -->
+		<section id="secContent">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+			<!-- <div id="myDiv"></div> -->
+			<!-- <button onclick="loadXMLDoc('personalInfo.html','view')">ajax change content</button> -->
+		</section>
+		<!-- <button onclick="loadXMLDoc('personalInfo.html','view')">ajax change content</button> -->
+		<!-- footer占位元素 -->
+		<!-- <div class="footer-place"></div> -->
+		<footer id="footContent">
+			<section id="footSec">lizeyu</section>	
+		</footer>
+	</div>
+	<div id="colorLevel"></div>
+	<script src="script/pageAction.js"></script>
+	<!-- <script src="script/ajaxAction.js"></script> -->
+</body>
+</html>
