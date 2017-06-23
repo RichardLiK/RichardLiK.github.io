@@ -1,3 +1,15 @@
+function $(id){
+	return document.getElementById(id);
+}
+//实现welcome界面
+
+function contentSecChange(){
+
+	$('welcomeSec').style.display = 'none';
+	$('secContent').style.display = 'block';
+}
+var t = setTimeout("contentSecChange()", 2000);
+
 //四格li透明度递减
 var secContent = document.getElementById('secContent');
 var liList = secContent.getElementsByTagName('li');
