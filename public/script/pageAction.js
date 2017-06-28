@@ -45,7 +45,8 @@ for (var i = 0; i < liList.length; i++){
 	var cacheContent;
 	liList[i].onmouseover = function(){
 		cacheContent = this.innerHTML;
-		loadXMLDoc('test1.txt','src', this);
+		console.log(cacheContent);
+		loadXMLDoc(cacheContent + '.txt','src', this);
 		//console.log(cache[i]);
 	};
 	liList[i].onmouseout = function(){

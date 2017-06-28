@@ -39,7 +39,7 @@ function loadXMLDoc(filename, path, e){
 	xmlhttp.open("GET",path + "/" + filename,true);
 	//设置ajax请求格式，通过send可以向后台传数据
 	//xmlhttp.open("GET","src/" + filename,true);
-	xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+	xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded;charset=utf-8");
   	xmlhttp.setRequestHeader('Access-Control-Allow-Origin', 'https://richardlik.github.io');
 	//xmlhttp.send("filename=" + filename);
 	xmlhttp.send();
