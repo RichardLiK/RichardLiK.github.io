@@ -31,7 +31,7 @@ function loadXMLDoc(filename, path, e){
 	    	}	else {
 	    	 
 	    		myDivContent = e;
-	    		console.log(e);
+	    		//console.log(e);
 	    	}
 	    	myDivContent.innerHTML = xmlhttp.responseText;
 	    }

@@ -42,10 +42,15 @@ for (var i = 0; i < liList.length; i++){
 	//这里ajax会自动执行
 	//liList[i].addEventListener("click", loadXMLDoc('test1.txt','src', liList[i]));
 	//用onclick就不会自动执行，按照预期，点击li加载对应的文本内容
-	liList[i].onclick = function(){
+	var cacheContent;
+	liList[i].onmouseover = function(){
+		cacheContent = this.innerHTML;
 		loadXMLDoc('test1.txt','src', this);
-		console.log(this);
+		//console.log(cache[i]);
 	};
+	liList[i].onmouseout = function(){
+		this.innerHTML = cacheContent;
+	}
 }
 // liList[1].onclick = function(){
 // 	loadXMLDoc('personalInfo.html','view');

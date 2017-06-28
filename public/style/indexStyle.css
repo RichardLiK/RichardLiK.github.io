@@ -111,6 +111,10 @@ ul {
 	color: #FFFFFF;
 	background-color: rgba(43, 32, 32, 0.5);
 }
+#secContent ul li:hover{
+	cursor: pointer;
+	background-color: rgba(43, 32, 32, 0.3);
+}
 #persionalInfo{
 	padding: 50px;
 }
