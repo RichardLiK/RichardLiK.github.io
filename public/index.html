@@ -8,9 +8,10 @@
 	<!-- <base href="public/" /> -->
 	<link rel="stylesheet" href="style/reset.css ">
 	<link rel="stylesheet" href="style/indexStyle.css">
+	<link rel="stylesheet" href="style/personalInfo.css">
 	<script src="script/ajaxAction.js"></script>
 </head>
-<body>
+<body onload="">
 
 	<div id="content">
 		<!-- welcome -->
@@ -18,7 +19,7 @@
 			<nav id="navContent">
 			<ul>
 			<!-- https://richardlik.github.io/public/index.html -->
-				<li><a href="http://127.0.0.1:3030/public/index.html">首页</a></li>
+				<li><a href="http://127.0.0.1:3030/public/index.html" onclick="clearInterval(welOpacityChange);">首页</a></li>
 				<!-- href会直接跳转，从而不执行之后的onclick -->
 				<li><a onclick="loadXMLDoc('personalInfo.html','view')">个人信息</a></li>
 				<li><a onclick="loadXMLDoc('personalInfo.html','view')">作品展示</a></li>
@@ -34,7 +35,7 @@
 		<!-- <img src="src/indexPage.jpg" alt="content background" id="backgroundImg"> -->
 		<section id="welcomeSec">welcome to my page</section>
 		<section id="secContent">
-			<ul>
+			<ul class="basicContent">
 				<li>HTML5</li>
 				<li>Javascript</li>
 				<li>node</li>

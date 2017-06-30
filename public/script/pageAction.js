@@ -15,22 +15,32 @@ function contentSecChange(ele1, ele2, interval){
 }
 function opaChange(ele, method){
 	if(method == 'plus'){
-		ele.style.opacity += 0.03;	
+		if(ele.style.opacity < 1){
+			while(ele.style.opacity < 1){
+				ele.style.opacity += 0.03;	
+			}
+			
+		} else{
+			contentSecChange(welcomeSec, secContent, welOpacityChange);
+		}
 	} else if(method == 'subtraction'){
-		ele.style.opacity -= 0.03;
+		if(ele.style.opacity > 0){
+			ele.style.opacity -= 0.03;
+		} else{
+			//contentSecChange(welcomeSec, secContent, conOpacityChange);
+			contentSecChange(welcomeSec, secContent, welOpacityChange);
+		}
 	}
 	
 } 
-//opaChange(secContent, 'plus');
-var welOpacityChange = setInterval("opaChange(welcomeSec, 'subtraction')", 100);
-var welcomeDisappear = setTimeout("contentSecChange(welcomeSec, secContent, welOpacityChange)", 2000);
+var welOpacityChange = setInterval("opaChange(welcomeSec, 'subtraction')", 1);//50
 //这里加只能加一次，即变成0.03，不知道什么原因
-// var conOpacityChange = setInterval("opaChange(secContent, 'plus')", 100);
-// var welcomeDisappear = setTimeout("contentSecChange(welcomeSec, secContent, conOpacityChange)", 2000);
+//var conOpacityChange = setInterval("opaChange(secContent, 'plus')", 100);
 
 //四格li透明度递减
 var secContent = document.getElementById('secContent');
-var liList = secContent.getElementsByTagName('li');
+//console.log( secContent.getElementsByClassName('basicContent'));
+var liList = secContent.getElementsByClassName('basicContent')[0].getElementsByTagName('li');
 var baseOpicity = 0.8;
 
 for (var i = 0; i < liList.length; i++){
@@ -45,7 +55,7 @@ for (var i = 0; i < liList.length; i++){
 	var cacheContent;
 	liList[i].onmouseover = function(){
 		cacheContent = this.innerHTML;
-		console.log(cacheContent);
+		//console.log(cacheContent);
 		loadXMLDoc(cacheContent + '.txt','src', this);
 		//console.log(cache[i]);
 	};

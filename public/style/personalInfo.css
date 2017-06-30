@@ -1,0 +1,136 @@
+/*个人信息*/
+#persionalInfo{
+	/*padding: 50px;*/
+	min-height: 1000px;
+	font-size: 13px;
+}
+#persionalInfo .icon{
+	position: relative;
+	bottom: -5px;
+	width: 20px;
+	height: 20px;
+	opacity: 0.5;
+}
+#persionalInfo h2{
+	line-height: 40px;
+	font-size: 2em;
+	font-weight: 550;
+}
+#persionalInfo h3{
+	margin-top: 20px;
+	width: 100%;
+	line-height: 30px;
+	font-size: 1.5em;
+	font-weight: 550;
+	border-bottom: solid rgba(43, 32, 32, 0.2) 4px;
+}
+#persionalInfo p{
+	margin-top: 5px;
+	line-height: 15px;
+	max-width: 450px;
+	letter-spacing: 1px;
+}
+
+/*个人信息头*/
+#persionalInfoHead{
+	float: left;
+	width: 25%;
+	height: 100%;
+	background-color: rgba(43, 32, 32, 0.2);
+}
+#persionalInfoHead div{
+	padding: 10px 20px;
+}
+#persionalInfoHead div li{
+	line-height: 50px;
+}
+#persionalInfoHead .tech li{
+	margin-top: 30px;
+	padding-left: 10px;
+	line-height: 20px;
+	background-color: rgba(43, 32, 32, 0.2);
+}
+#persionalInfoHead .tech .HTML5{
+	width:150px;
+}
+#persionalInfoHead .tech .Javascript{
+	width:150px;
+}
+#persionalInfoHead .tech .shell{
+	width:120px;
+}
+#persionalInfoHead .tech .node{
+	width:100px;
+}
+.photo{
+	height: 170px;
+	text-align: center;
+	/*background-color: red;*/
+}
+.photo img{
+	position: relative;
+	top: 30px;
+	width: 105px;
+	height: 140px;
+	opacity: 0.8;
+	/*background-color: red;*/
+}
+.persInfo{
+	height: 250px;
+	/*background-color: blue;*/
+}
+.tech{
+	height: 250px;
+	/*background-color: black;*/
+}
+.intrest{
+	height: 250px;
+	/*background-color: green;*/
+}
+
+/*基偶选择器，even，odd不能用在ie*/
+/*.intrest span:nth-child(even){
+	float: right;
+}*/
+/*个人信息内容*/
+#basicInfo{
+	margin: 50px auto;
+	float: left;
+	margin-left: 30px;
+}
+#basicInfo > div:hover{
+	color: #FFFFFF;
+	cursor: default;
+}
+#basicInfo > div:hover > h3{
+	border-bottom: solid rgba(43, 32, 32, 0.3) 4px;
+}
+
+#basicInfo ul{
+	position: relative;
+	left: 15px;
+	list-style: square;
+}
+#basicInfo ul li{
+	margin-top: 5px;
+	line-height: 15px;
+	max-width: 450px;
+	letter-spacing: 1px;
+}
+.titleName{
+	height: 80px;
+}
+
+
+.eduBak{
+	height: 180px;
+}
+.workExp{
+	height: 190px;
+}
+.program{
+	height: 220px;
+}
+.evaluation{
+	height: 130px;
+}
