@@ -33,7 +33,7 @@ function opaChange(ele, method){
 	}
 	
 } 
-var welOpacityChange = setInterval("opaChange(welcomeSec, 'subtraction')", 1);//50
+var welOpacityChange = setInterval("opaChange(welcomeSec, 'subtraction')", 50);//50
 //这里加只能加一次，即变成0.03，不知道什么原因
 //var conOpacityChange = setInterval("opaChange(secContent, 'plus')", 100);
 
